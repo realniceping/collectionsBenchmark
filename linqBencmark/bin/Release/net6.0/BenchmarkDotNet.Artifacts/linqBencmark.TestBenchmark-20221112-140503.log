@@ -1,0 +1,2 @@
+// Validating benchmarks:
+Benchmarked method `method` contains illegal character(s) or uses C# keyword. Please use `[<Benchmark(Description = "Custom name")>]` to set custom display name.

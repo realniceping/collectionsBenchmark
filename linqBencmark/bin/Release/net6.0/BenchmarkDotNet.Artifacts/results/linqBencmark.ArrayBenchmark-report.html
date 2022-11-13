@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>linqBencmark.ArrayBenchmark-20221112-140849</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.2, OS=Windows 10 (10.0.19044.2251/21H2/November2021Update)
+AMD Ryzen 7 3700U with Radeon Vega Mobile Gfx, 1 CPU, 8 logical and 4 physical cores
+.NET SDK=6.0.402
+  [Host]     : .NET 6.0.10 (6.0.1022.47605), X64 RyuJIT AVX2
+  DefaultJob : .NET 6.0.10 (6.0.1022.47605), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>                          Method</th><th> Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Gen0</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>testArrayByForeach</td><td>272.2621 ns</td><td>5.4833 ns</td><td>9.0092 ns</td><td>279.5787 ns</td><td>-</td><td>-</td>
+</tr><tr><td>testArrayByFor</td><td>277.1082 ns</td><td>5.5457 ns</td><td>11.3285 ns</td><td>274.5274 ns</td><td>-</td><td>-</td>
+</tr><tr><td>testArrayByWhile</td><td>275.2497 ns</td><td>5.5385 ns</td><td>7.7642 ns</td><td>278.0704 ns</td><td>-</td><td>-</td>
+</tr><tr><td>takeFirstThreeElementOfArrayByTake</td><td>22.0985 ns</td><td>0.4678 ns</td><td>0.6857 ns</td><td>22.4472 ns</td><td>0.0229</td><td>48 B</td>
+</tr><tr><td>takeFirstThreeElementOfArrayByIter</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>-</td><td>-</td>
+</tr><tr><td>takeFirstThreeElementOfArraySelfMethod</td><td>0.0000 ns</td><td>0.0000 ns</td><td>0.0000 ns</td><td>0.0000 ns</td><td>-</td><td>-</td>
+</tr><tr><td>takeLastThreeElementOfArrayByLast</td><td>20.0409 ns</td><td>0.4328 ns</td><td>0.5777 ns</td><td>20.3331 ns</td><td>-</td><td>-</td>
+</tr></tbody></table>
+</body>
+</html>
