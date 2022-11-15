@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arsen\\source\\repos\\linqBencmark\\linqBencmark\\linqBencmark.csproj": {}
+    "D:\\collectionsBenchmark\\collectionsBenchmark\\linqBencmark\\linqBencmark.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arsen\\source\\repos\\linqBencmark\\linqBencmark\\linqBencmark.csproj": {
+    "D:\\collectionsBenchmark\\collectionsBenchmark\\linqBencmark\\linqBencmark.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arsen\\source\\repos\\linqBencmark\\linqBencmark\\linqBencmark.csproj",
+        "projectUniqueName": "D:\\collectionsBenchmark\\collectionsBenchmark\\linqBencmark\\linqBencmark.csproj",
         "projectName": "linqBencmark",
-        "projectPath": "C:\\Users\\arsen\\source\\repos\\linqBencmark\\linqBencmark\\linqBencmark.csproj",
+        "projectPath": "D:\\collectionsBenchmark\\collectionsBenchmark\\linqBencmark\\linqBencmark.csproj",
         "packagesPath": "C:\\Users\\arsen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arsen\\source\\repos\\linqBencmark\\linqBencmark\\obj\\",
+        "outputPath": "D:\\collectionsBenchmark\\collectionsBenchmark\\linqBencmark\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\arsen\\AppData\\Roaming\\NuGet\\NuGet.Config",

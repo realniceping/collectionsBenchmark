@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>linqBencmark.CollectionsBenchmark-20221113-183753</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.2, OS=Windows 10 (10.0.19044.2251/21H2/November2021Update)
+AMD Ryzen 5 5600X, 1 CPU, 12 logical and 6 physical cores
+.NET SDK=6.0.402
+  [Host]     : .NET 6.0.10 (6.0.1022.47605), X64 RyuJIT AVX2
+  DefaultJob : .NET 6.0.10 (6.0.1022.47605), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>                          Method</th><th>   Mean</th><th>Error</th><th>StdDev</th><th>Rank</th><th>Gen0</th><th>Gen1</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>testArrayByForeach</td><td>218.5447 ns</td><td>0.1539 ns</td><td>0.1364 ns</td><td>6</td><td>-</td><td>-</td><td>-</td>
+</tr><tr><td>testArrayByFor</td><td>219.7654 ns</td><td>0.8931 ns</td><td>0.8354 ns</td><td>6</td><td>-</td><td>-</td><td>-</td>
+</tr><tr><td>testArrayByWhile</td><td>220.4312 ns</td><td>1.0626 ns</td><td>0.9419 ns</td><td>6</td><td>-</td><td>-</td><td>-</td>
+</tr><tr><td>takeFirstThreeElementOfArrayByTake</td><td>12.5368 ns</td><td>0.0327 ns</td><td>0.0306 ns</td><td>4</td><td>0.0029</td><td>-</td><td>48 B</td>
+</tr><tr><td>takeFirstThreeElementOfArrayByIter</td><td>NA</td><td>NA</td><td>NA</td><td>?</td><td>-</td><td>-</td><td>-</td>
+</tr><tr><td>takeFirstThreeElementOfArraySelfMethod</td><td>0.0003 ns</td><td>0.0003 ns</td><td>0.0003 ns</td><td>1</td><td>-</td><td>-</td><td>-</td>
+</tr><tr><td>takeLastThreeElementOfArrayByLast</td><td>10.7827 ns</td><td>0.0197 ns</td><td>0.0175 ns</td><td>3</td><td>-</td><td>-</td><td>-</td>
+</tr><tr><td>testListByForeach</td><td>651.7062 ns</td><td>0.8490 ns</td><td>0.7942 ns</td><td>8</td><td>-</td><td>-</td><td>-</td>
+</tr><tr><td>testListByFor</td><td>434.3572 ns</td><td>0.4224 ns</td><td>0.3527 ns</td><td>7</td><td>-</td><td>-</td><td>-</td>
+</tr><tr><td>testListByWhile</td><td>435.2781 ns</td><td>0.3440 ns</td><td>0.3218 ns</td><td>7</td><td>-</td><td>-</td><td>-</td>
+</tr><tr><td>testListByLinq</td><td>14.3310 ns</td><td>0.1357 ns</td><td>0.1269 ns</td><td>5</td><td>0.0043</td><td>-</td><td>72 B</td>
+</tr><tr><td>testListMarshallAsSpan</td><td>219.4318 ns</td><td>0.0573 ns</td><td>0.0479 ns</td><td>6</td><td>-</td><td>-</td><td>-</td>
+</tr><tr><td>testListAsReadOnly</td><td>4,312.4920 ns</td><td>39.8140 ns</td><td>37.2420 ns</td><td>11</td><td>-</td><td>-</td><td>64 B</td>
+</tr><tr><td>sortListBySort</td><td>8,006.2965 ns</td><td>111.7058 ns</td><td>104.4897 ns</td><td>12</td><td>0.5035</td><td>-</td><td>8424 B</td>
+</tr><tr><td>sortListByOrderBy</td><td>6.0520 ns</td><td>0.0503 ns</td><td>0.0471 ns</td><td>2</td><td>0.0033</td><td>-</td><td>56 B</td>
+</tr><tr><td>testPasteInDictiontary</td><td>925.6849 ns</td><td>18.1929 ns</td><td>25.5040 ns</td><td>9</td><td>0.1545</td><td>0.0381</td><td>2600 B</td>
+</tr><tr><td>testConcurentDictionary</td><td>2,906.2528 ns</td><td>97.7674 ns</td><td>272.5364 ns</td><td>10</td><td>0.1564</td><td>0.0381</td><td>2640 B</td>
+</tr></tbody></table>
+</body>
+</html>
